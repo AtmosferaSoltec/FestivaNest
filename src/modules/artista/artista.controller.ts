@@ -33,6 +33,11 @@ export class ArtistaController {
     return this.artistaService.findAll();
   }
 
+  @Get('test')
+  findAllTest() {
+    return this.artistaService.findAll();
+  }
+
   @UseGuards(AuthGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
